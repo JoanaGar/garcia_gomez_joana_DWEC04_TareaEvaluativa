@@ -1,0 +1,226 @@
+/* === ESTILO GENERAL === */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #121212;
+    color: #ffffff;
+}
+
+/* === HEADER === */
+header {
+    background: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #6c5ce7;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* === KPIs === */
+.kpi-container {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+}
+
+.kpi {
+    text-align: center;
+    color: #fdcb6e;
+}
+
+.kpi .valor {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* === FILTROS === */
+.filtros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    flex-wrap: wrap;
+    background: #1f1f1f;
+    border-bottom: 2px solid #6c5ce7;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.filtros input[type="text"],
+.filtros select {
+    padding: 10px 15px;
+    border-radius: 8px;
+    background: #2d2d2d;
+    color: #fff;
+    border: 1px solid #6c5ce7;
+    font-size: 14px;
+}
+
+.filtros select {
+    border-color: #fd79a8;
+}
+
+.filtros button, 
+.filtros .btn-favoritos {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+    color: #fff;
+}
+
+.filtros button {
+    background: #341f97;
+}
+
+.filtros .btn-favoritos {
+    background: #d63031;
+    text-decoration: none;
+}
+
+/* === GRID === */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* === TARJETAS UNIFICADAS === */
+.card {
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.card a, 
+.card .fav-btn {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.card a {
+    background: #341f97;
+}
+
+.card .fav-btn {
+    background: #d63031;
+}
+
+.rating {
+    font-size: 14px;
+    color: #ffdd57;
+}
+
+/* === TOOLTIP === */
+.tooltip {
+    position: absolute;
+    background: rgba(40, 40, 40, 0.95);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    max-width: 250px;
+    font-size: 13px;
+    line-height: 1.4;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    z-index: 1000;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.tooltip.show {
+    opacity: 1;
+}
+
+/* === BOTON VOLVER === */
+.volver {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: #341f97;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    margin: 20px 0;
+}
+
+/* === DETALLE DE PELICULA === */
+.img-detalle {
+    width: 250px;
+    border-radius: 10px;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Poster + texto + gráfico */
+.detalle-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.detalle-container .img-detalle {
+    margin: 0;
+}
+
+#generos-pelicula {
+    margin-top: 15px;
+    text-align: center;
+}
+
+#generos-pelicula .btn-genero {
+    padding: 8px 12px;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    background: #098d5a;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Gráfico */
+.detalle-container canvas#grafico {
+    width: 300px;
+    height: 150px;
+}

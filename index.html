@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>MovieExplorer</title>
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header> 
+    <h1>🎬 MovieExplorer</h1> 
+    <!-- KPIs --> 
+    <div class="kpi-container"> 
+        <div class="kpi"> 
+            <div>Total Películas</div> 
+            <div class="valor" id="total-peliculas">0</div> 
+        </div> 
+        <div class="kpi"> 
+            <div>Promedio Rating</div> 
+            <div class="valor" id="promedio-rating">0</div> 
+        </div> 
+        <div class="kpi"> 
+            <div>Total Favoritos</div> 
+            <div class="valor" id="total-favoritos">0</div> 
+        </div> 
+    </div> 
+    
+    <nav> 
+        <a href="extra.html">Favoritos ⭐</a> 
+    </nav> 
+</header>
+
+    <section class="filtros">
+        <input type="text" id="buscar" placeholder="Buscar película...">
+        <select id="filtro-genero">
+            <option value="">Todos los géneros</option>
+        </select>
+        <button id="btn-buscar">Buscar 🎬</button>
+    </section>
+
+    <section id="contenedor-peliculas" class="grid"></section>
+
+    <script src="../js/models/pelicula.js"></script>
+    <script src="../js/views/templates.js"></script>
+    <script src="../js/viewModels/app.js"></script>
+</body>
+</html>
